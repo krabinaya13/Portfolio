@@ -9,40 +9,91 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f6f9;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #00060e;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
     }
 
     /* Navbar */
     .navbar {
-      background-color: #34495e;
+      background-color: #060606;
     }
 
-    .navbar a {
-      color: #ffffff !important;
+    .navbar-brand, .nav-link {
+      color: #fffefe !important;
+    }
+
+    .nav-link:hover {
+      color: #0c7ba0 !important;
     }
 
     /* Header Section */
     #header {
       text-align: center;
-      padding: 50px;
-      background-color: #2c3e50;
+      padding: 100px 0;
+      background-color: #162b3f;
       color: #ffffff;
     }
 
     #header h1 {
-      font-size: 3rem;
-      font-weight: bold;
+      font-size: 3.5rem;
     }
 
     #header p {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
+    }
+
+    .btn-primary {
+      background-color: #a1adb3;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #0a6d9f;
+    }
+    .navbar {
+      background-color: #010912;
+    }
+
+    .navbar a {
+      color: #f8f8f8 !important;
     }
 
     /* About Section */
     #about {
+      padding: 80px 0;
+      background-color: #ebedf7;
+    }
+
+    #about h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      color: #01070d;
+    }
+
+    #about .content {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    #about img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    #about {
       padding: 50px;
-      background-color: #ecf0f1;
+      background-color: #dce6ea;
     }
 
     #about h2 {
@@ -68,45 +119,72 @@
     }
 
     /* Projects Section */
-    #projects {
-      padding: 50px;
+     #projects {
+      padding: 70px 0;
+      background-color: #f2f4f6;
     }
 
     #projects h2 {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+      color: #000306;
     }
 
     .project-card {
-      margin-bottom: 20px;
+      margin-bottom: 40px;
+      border: none;
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .project-card img {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    .card-body {
+      background-color: #dce1eb;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0 4px 8px rgba(212, 216, 227, 0.1);
     }
 
     /* Tools Section */
     #skills {
-      padding: 60px;
-      background-color: #ffffff;
+      padding: 40px 0;
+      background-color: #f2f4f6;
     }
 
     #skills h2 {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+      color: #00060b;
     }
 
     .tools-icons {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
     }
 
     .tools-icons img {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s;
+    }
+
+    .tools-icons img:hover {
+      transform: scale(1.1);
     }
 
     /* Contact Section */
     #contact {
       padding: 50px;
-      background-color: #34495e;
+      background-color: #5493d6;
       color: #ffffff;
     }
 
@@ -124,17 +202,23 @@
     .footer {
       text-align: center;
       margin-top: 20px;
-      color: #bdc3c7;
+      color: #f1f5f7;
     }
 
     .btn-primary {
-      background-color: #2980b9;
+      background-color: #184461;
       border: none;
     }
   </style>
 </head>
+  
+</style>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
 
 <body>
+  
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
@@ -153,6 +237,7 @@
       </div>
     </div>
   </nav>
+
 
   <!-- Header -->
   <header id="header">
@@ -177,128 +262,188 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <p class="text-center">
-        Every dataset tells a story. Let's dive into mine and discover how I bring data to life!
-      </p>
-      <div class="row">
-        <!-- Project 1 -->
-        <div class="col-md-4">
-          <div class="card project-card">
-            <img src="images/projects/9-user_journey_analysis_in_python.jpeg" class="card-img-top" alt="Project 1">
-            <div class="card-body">
-              <h5 class="card-title">User Journey Analysis</h5>
-              <p class="card-text">Developed a predictive model to assess loan default risks using Python and scikit-learn.</p>
-              <a href="#" class="btn btn-primary">Blog Post</a>
-              <a href="#" class="btn btn-secondary">Source Code</a>
-            </div>
-          </div>
-        </div>
-        <!-- Project 2 -->
-        <div class="col-md-4">
-          <div class="card project-card">
-            <img src="images/projects/Visualizing Customer Churn Effectively.png" class="card-img-top" alt="Project 2">
-            <div class="card-body">
-              <h5 class="card-title">Customer churn</h5>
-              <p class="card-text">Created an interactive Power BI dashboard to track and analyze sales trends.</p>
-              <a href="#" class="btn btn-primary">Blog Post</a>
-              <a href="#" class="btn btn-secondary">Source Code</a>
-            </div>
-          </div>
-        </div>
-        <!-- Project 3 -->
-        <div class="col-md-4">
-          <div class="card project-card">
-            <img src="images/projects/Customer Engagement Insights.png" class="card-img-top" alt="Project 3">
-            <div class="card-body">
-              <h5 class="card-title">Customer Engagement</h5>
-              <p class="card-text">Implemented a clustering model for customer segmentation using k-means in Python.</p>
-              <a href="#" class="btn btn-primary">Blog Post</a>
-              <a href="#" class="btn btn-secondary">Source Code</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tools Section -->
-  <section id="skills">
-    <div class="container">
-      <h2>Tools</h2>
-      <div class="tools-icons">
-        <img src="images/skills/Python.jpg" alt="Python">
-        <img src="images/skills/Powerbi.jpg" alt="Power BI">
-        <img src="images/skills/SQL.png" alt="SQL">
-        <img src="images/skills/Tableau.png" alt="Tableau">
-        <img src="images/skills/GA.png" alt="Google analytics">
-        <img src="images/skills/ZOHO analytics.png" alt="Zoho analytics">
-        <img src="images/skills/excel.jpg" alt="Excel">
-        <img src="images/skills/looker.png" alt="Looker">
-        <img src="images/skills/R.jpg" alt="R">
-        <img src="images/skills/jupyter.png" alt="Jupyter">
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section text-white bg-dark">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <h2>Contact Me</h2>
-          <p><i class="fas fa-envelope"></i> krabinaya13@gmail.com</p>
-          <p><i class="fas fa-phone"></i> +91 97917-23045</p>
-          <div>
-            <a href="https://www.linkedin.com/in/abinaya-k-r-a852641b2/" target="_blank">
-              <img src="images/icons/linkedin.png" alt="LinkedIn" class="social-icon">
+<!-- Projects Section -->
+<section id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <p class="text-center">
+      Every dataset tells a story. Let's dive into mine and discover how I bring data to life!
+    </p>
+    <div class="row d-flex justify-content-around text-center">
+      <!-- Project 1 -->
+      <div class="col-md-3">
+        <div class="card project-card">
+          <img src="images/projects/9-user_journey_analysis_in_python.jpeg" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">User Journey Analysis</h5>
+            <p class="card-text">Developed a predictive model to assess loan default risks using Python and scikit-learn.</p>
+            <a href="https://medium.com/@krabinaya13" target="_blank">
+              <img src="images/icons/medium.png" alt="Medium" class="social-icon" style="width: 20px; height: 20px;">
             </a>
             <a href="https://github.com/krabinaya13" target="_blank">
-              <img src="images/icons/github.png" alt="GitHub" class="social-icon">
+              <img src="images/icons/github.png" alt="GitHub" class="social-icon" style="width: 20px; height: 20px;">
             </a>
-            <a href="https://www.kaggle.com/krabinaya" target="_blank">
-              <img src="images/icons/kaggle.png" alt="Kaggle" class="social-icon">
-            </a>
-            <a href="https://medium.com/@krabinaya13" target="_blank">
-              <img src="images/icons/medium.png" alt="Medium" class="social-icon">
+            <a href="https://public.tableau.com/app/profile/abinaya.k.r/vizzes" target="_blank">
+              <img src="images/skills/Tableau.png" alt="Tableau" class="social-icon" style="width: 20px; height: 20px;">
             </a>
           </div>
         </div>
-        <div class="col-lg-6">
-          <!-- Contact Form -->
-          <form>
-            <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Your Name">
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Your Email">
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
+      </div>
+      <!-- Project 2 -->
+      <div class="col-md-3">
+        <div class="card project-card">
+          <img src="images/projects/Visualizing Customer Churn Effectively.png" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Customer Churn for Subscription based model</h5>
+            <p class="card-text">Perform churn analysis of a SaaS business and uncover insights that can be necessary for any business to understand its consumer base and to boost revenue.</p>
+            <!-- Same links for consistency -->
+            <a href="https://medium.com/@krabinaya13/the-science-of-retention-analyzing-customer-churn-rate-in-online-education-cbb5702953e8" target="_blank">
+              <img src="images/icons/medium.png" alt="Medium" class="social-icon" style="width: 20px; height: 20px;">
+            </a>
+            <a href="https://github.com/krabinaya13/Portfolio/tree/main/code/Customer%20churn%20-%20raw%20data" target="_blank">
+              <img src="images/icons/github.png" alt="GitHub" class="social-icon" style="width: 20px; height: 20px;">
+            </a>
+            <a href="https://public.tableau.com/app/profile/abinaya.k.r/vizzes" target="_blank">
+              <img src="images/skills/Tableau.png" alt="Tableau" class="social-icon" style="width: 20px; height: 20px;">
+            </a>
+          </div>
         </div>
       </div>
-      <footer class="footer text-center mt-4">
-        <p>
-          "Data is the new oil. It's valuable, but if unrefined, it cannot really be used. It has to be transformed into fuel, plastic, chemicals, etc., to create a valuable entity that drives profitable activity." – Clive Humby
-        </p>
-        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
-      </footer>
+      <!-- Project 3 -->
+      <div class="col-md-3">
+        <div class="card project-card">
+          <img src="images/projects/Customer Engagement Insights.png" class="card-img-top" alt="Project 3">
+          <div class="card-body">
+            <h5 class="card-title">Customer Engagement</h5>
+            <p class="card-text">Conducting a customer engagement analysis and ensuring that users experience the best of the product or service is of utmost importance for every company.</p>
+            <!-- Same links for consistency -->
+            <a href="https://medium.com/@krabinaya13" target="_blank">
+              <img src="images/icons/medium.png" alt="Medium" class="social-icon" style="width: 20px; height: 20px;">
+            </a>
+            <a href="https://github.com/krabinaya13/customer-engagement-analysis-with-sql-and-tableau" target="_blank">
+              <img src="images/icons/github.png" alt="GitHub" class="social-icon" style="width: 20px; height: 20px;">
+            </a>
+            <a href="https://public.tableau.com/app/profile/abinaya.k.r/viz/CustomerEngagementanalysisforE-learningSubscriptionModel/EngagementMonth" target="_blank">
+              <img src="images/skills/Tableau.png" alt="Tableau" class="social-icon" style="width: 20px; height: 20px;">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Project 4 -->
+      <div class="col-md-3">
+        <div class="card project-card">
+          <img src="images/projects/Credit risk model image.png" class="card-img-top" alt="Project 4">
+          <div class="card-body">
+            <h5 class="card-title">Credit Risk Modeling: Building a Comprehensive Default Prediction Framework</h5>
+            <p class="card-text">This project demonstrates end-to-end credit risk modeling through scorecard development, Loss Given Default (LGD), Exposure at Default (EAD), and Expected Loss calculations to optimize lending decisions for financial institutions.</p>
+            <!-- Same links for consistency -->
+            <a href="https://medium.com/@krabinaya13/demystifying-credit-risk-modelling-a-deep-dive-into-scorecards-lgd-and-ead-models-for-loan-76dcd45a0024" target="_blank">
+              <img src="images/icons/medium.png" alt="Medium" class="social-icon" style="width: 20px; height: 20px;">
+            </a>
+            <a href="https://github.com/krabinaya13/Credit-Risk-Model" target="_blank">
+              <img src="images/icons/github.png" alt="GitHub" class="social-icon" style="width: 20px; height: 20px;">
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+<!-- Project 2 -->
+      <div class="col-md-3">
+        <div class="card project-card">
+          <img src="images/projects/Visualizing Customer Churn Effectively.png" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Customer Churn for Subscription based model</h5>
+            <p class="card-text">Perform churn analysis of a SaaS business and uncover insights that can be necessary for any business to understand its consumer base and to boost revenue.</p>
+            <!-- Same links for consistency -->
+            <a href="https://medium.com/@krabinaya13/the-science-of-retention-analyzing-customer-churn-rate-in-online-education-cbb5702953e8" target="_blank">
+              <img src="images/icons/medium.png" alt="Medium" class="social-icon" style="width: 20px; height: 20px;">
+            </a>
+            <a href="https://github.com/krabinaya13/Portfolio/tree/main/code/Customer%20churn%20-%20raw%20data" target="_blank">
+              <img src="images/icons/github.png" alt="GitHub" class="social-icon" style="width: 20px; height: 20px;">
+            </a>
+            <a href="https://public.tableau.com/app/profile/abinaya.k.r/vizzes" target="_blank">
+              <img src="images/skills/Tableau.png" alt="Tableau" class="social-icon" style="width: 20px; height: 20px;">
+            </a>
+          </div>
+        </div>
+      </div>
+
+<!-- Tools Section -->
+<section id="skills">
+  <div class="container">
+    <h2>Tools</h2>
+    <div class="tools-icons">
+      <img src="images/skills/Python.jpg" alt="Python">
+      <img src="images/skills/Powerbi.jpg" alt="Power BI">
+      <img src="images/skills/SQL.png" alt="SQL">
+      <img src="images/skills/Tableau.png" alt="Tableau">
+      <img src="images/skills/GA.png" alt="Google analytics">
+      <img src="images/skills/ZOHO analytics.png" alt="Zoho analytics">
+      <img src="images/skills/excel.jpg" alt="Excel">
+      <img src="images/skills/looker.png" alt="Looker">
+      <img src="images/skills/R.jpg" alt="R">
+      <img src="images/skills/jupyter.png" alt="Jupyter">
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section text-white bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2>Contact Me</h2>
+        <p><i class="fas fa-envelope"></i> krabinaya13@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +91 97917-23045</p>
+        <div>
+          <a href="https://www.linkedin.com/in/abinaya-k-r-a852641b2/" target="_blank">
+            <img src="images/icons/linkedin.png" alt="LinkedIn" class="social-icon">
+          </a>
+          <a href="https://github.com/krabinaya13" target="_blank">
+            <img src="images/icons/github.png" alt="GitHub" class="social-icon">
+          </a>
+          <a href="https://www.kaggle.com/krabinaya" target="_blank">
+            <img src="images/icons/kaggle.png" alt="Kaggle" class="social-icon">
+          </a>
+          <a href="https://medium.com/@krabinaya13" target="_blank">
+            <img src="images/icons/medium.png" alt="Medium" class="social-icon">
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <!-- Contact Form -->
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Your Name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Your Email">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+    <footer class="footer text-center mt-4">
+      <p>
+        "Data is the new oil. It's valuable, but if unrefined, it cannot really be used. It has to be transformed into fuel, plastic, chemicals, etc., to create a valuable entity that drives profitable activity." – Clive Humby
+      </p>
+      <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+    </footer>
+  </div>
+</section>
 
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
