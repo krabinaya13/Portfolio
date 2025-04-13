@@ -76,12 +76,14 @@
     #about {
       padding: 50px;
       background-color: #b9e3f3;
+      color: #000; /* Darker text for better readability */
     }
+
 
     #about h2 {
       text-align: center;
       margin-bottom: 30px;
-      color: #01070d;
+      color: #000912;
     }
 
     #about .content {
@@ -161,16 +163,16 @@
     }
 
     .tools-icons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+      gap: 20px;
+      justify-items: center;
     }
 
     .tools-icons img {
-      width: 30px;
-      height: 30px;
-      transition: transform 0.3s;
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
     }
 
     .tools-icons img:hover {
