@@ -74,8 +74,8 @@
 
     /* About Section */
     #about {
-      padding: 50px;
-      background-color: #badeec;
+      padding: 40px;
+      background-color: #f8f9fa;
       color: #000; /* Darker text for better readability */
     }
 
@@ -90,26 +90,32 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 20px;
+      gap: 30px;
     }
 
-    #about img {
-      max-width: 250px;
-      height: auto;
-      border-radius: 10px;
-    }
+
+    .about-me img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;}
+
 
     #about p {
-      text-align: justify;
+      text-align: left;
       font-size: 1.1rem;
     }
 
     /* Projects Section */
-  #projects {
-    padding: 70px 0;
-    background-color: #f2f4f6;
-    color: #000;
-  }
+
+    #projects {
+      padding: 70px 0;
+      background: linear-gradient(to right, #f0f4f8, #dbeafe);
+      color: #000;
+    }
+
 
   #projects h2 {
     text-align: center;
@@ -131,10 +137,11 @@
     height: 100%;
     margin-bottom: 30px;
     border: none;
-    border-radius: 15px;
-    overflow: hidden;box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #fff;
+    background-color:  #dbeafe;
   }
 
   .project-card:hover {
@@ -144,7 +151,7 @@
 
   .project-card img {
     width: 100%;
-    height: 200px;
+    height: 500px;
     object-fit: cover;
   }
 
@@ -153,10 +160,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #e6e9f0;
+    background-color: #e2e8f0;
     padding: 20px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
   }
 
@@ -182,34 +189,53 @@
       transform: scale(1.2);
     }
 
+    .card-body h5 {
+      margin-bottom: 15px;
+    }
+
+    .card-body p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+
     /* Tools Section */
     #skills {
-      padding: 40px 0;
-      background-color: #f2f4f6;
+      padding: 60px 0;
+      background: linear-gradient(to right, #f8fafc, #e2e8f0);
     }
+
 
     #skills h2 {
       text-align: center;
       margin-bottom: 20px;
-      color: #00060b;
+      color: #0f172a;
     }
 
     .tools-icons {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-      gap: 20px;
+      gap: 10px;
       justify-items: center;
     }
 
     .tools-icons img {
-      width: 40px;
-      height: 40px;
+      width: 20px;
+      height: 20px;
+      margin: 10px;
       object-fit: contain;
     }
 
     .tools-icons img:hover {
       transform: scale(1.1);
     }
+
+    .tool-icon {
+      max-height: 60px;
+      transition: transform 0.3s ease;
+    }
+
+
 
     /* Contact Section */
     #contact {
@@ -239,6 +265,20 @@
       background-color: #184461;
       border: none;
     }
+
+
+
+    .accent-hover:hover {
+      background-color: #facc15 !important;
+      color: #000 !important;
+}
+
+    .section-container {
+      background-color: #f0f4f8;
+      padding: 60px 20px;
+      border-radius: 12px;
+    }
+
   </style>
 </head>
 
@@ -254,7 +294,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-5 mb-4 mb-md-0">
-        <img src="images/about/Abi pic ai.jpg" class="img-fluid rounded" alt="About Me">
+        <img src="images/about/Abi pic ai.jpg" class="card-img-top img-fluid" alt="About Me">
         </div>
         <div class="col-md-7">
           <h2 class="fw-bold">About Me</h2>
@@ -283,8 +323,8 @@
         <div class="card mb-4 flex-md-row align-items-center project-card">
           <img src="images/projects/Screenshot 2025-01-27 213820.png" class= "img-fluid rounded-start" alt="Project 1" style="width: 200px; height: auto;">
           <div class="card-body">
-            <h5 class="card-title">Customer Analytics in Python</h5>
-            <p class="card-text">Developed a model using STP Framework to segment customer based on purchase behaviour and Deep Learning in Python for powerful predictions about the future behaviour of clients.</p>
+            <h5 class="card-title text-center">Customer Analytics in Python</h5>
+            <p class="card-text text-start">Developed a model using STP Framework to segment customer based on purchase behaviour and Deep Learning in Python for powerful predictions about the future behaviour of clients.</p>
             <div class="d-flex gap-3 mt-2">
               <a href="https://medium.com/@krabinaya13/unlocking-growth-the-power-of-customer-analytics-with-the-stp-framework-8e12f1679d81" target="_blank">
                 <img src="images/icons/medium.png" alt="Medium" style="width: 20px;">
@@ -302,8 +342,8 @@
         <div class="card mb-4 flex-md-row align-items-center project-card">
           <img src="images/projects/Visualizing Customer Churn Effectively.png" class= "img-fluid rounded-start" alt="Project 2" style="width: 200px; height: auto;">
           <div class="card-body">
-            <h5 class="card-title">Customer Churn for Subscription based model</h5>
-            <p class="card-text">Perform churn analysis of a SaaS business and uncover insights that can be necessary for any business to understand its consumer base and to boost revenue.</p>
+            <h5 class="card-title text-center">Customer Churn for Subscription based model</h5>
+            <p class="card-text text-start">Perform churn analysis of a SaaS business and uncover insights that can be necessary for any business to understand its consumer base and to boost revenue.</p>
             <div class="d-flex gap-3 mt-2">
               <a href="https://medium.com/@krabinaya13/the-science-of-retention-analyzing-customer-churn-rate-in-online-education-cbb5702953e8" target="_blank">
                 <img src="images/icons/medium.png" alt="Medium" style="width: 20px;">
@@ -324,8 +364,8 @@
         <div class="card mb-4 flex-md-row align-items-center project-card">
           <img src="images/projects/Customer Engagement Insights.png" class= "img-fluid rounded-start" alt="Project 3" style="width: 200px; height: auto;">
           <div class="card-body">
-            <h5 class="card-title">Customer Engagement Analysis</h5>
-            <p class="card-text">Conducting a customer engagement analysis and ensuring that users experience the best of the product or service is of utmost importance for every company.</p>
+            <h5 class="card-title text-center">Customer Engagement Analysis</h5>
+            <p class="card-text text-start">Conducting a customer engagement analysis and ensuring that users experience the best of the product or service is of utmost importance for every company.</p>
             <div class="d-flex gap-3 mt-2">
               <a href="https://medium.com/@krabinaya13/engaging-learners-strategies-to-keep-students-motivated-and-retained-4399ec909a36" target="_blank">
                 <img src="images/icons/medium.png" alt="Medium" style="width: 20px;">
@@ -346,8 +386,8 @@
         <div class="card mb-4 flex-md-row align-items-center project-card">
           <img src="images/projects/Credit risk model image.png" class= "img-fluid rounded-start" alt="Project 4" style="width: 200px; height: auto;">
           <div class="card-body">
-            <h5 class="card-title">Credit Risk Modeling & Default Prediction</h5>
-            <p class="card-text">Built a comprehensive credit risk model using scorecards, LGD, EAD, and Expected Loss to support strategic lending decisions for financial institutions.</p>
+            <h5 class="card-title text-center">Credit Risk Modeling & Default Prediction</h5>
+            <p class="card-text text-start">Built a comprehensive credit risk model using scorecards, LGD, EAD, and Expected Loss to support strategic lending decisions for financial institutions.</p>
             <div class="d-flex gap-3 mt-2">
               <a href="https://medium.com/@krabinaya13/demystifying-credit-risk-modelling-a-deep-dive-into-scorecards-lgd-and-ead-models-for-loan-76dcd45a0024" target="_blank">
                 <img src="images/icons/medium.png" alt="Medium" style="width: 20px;">
@@ -366,23 +406,54 @@
 
 
 <!-- Tools Section -->
-<section id="skills">
+<section id="skills" class="py-5">
   <div class="container">
-    <h2>Tools</h2>
-    <div class="tools-icons">
-      <img src="images/skills/Python.jpg" alt="Python">
-      <img src="images/skills/Powerbi.jpg" alt="Power BI">
-      <img src="images/skills/SQL.png" alt="SQL">
-      <img src="images/skills/Tableau.png" alt="Tableau">
-      <img src="images/skills/GA.png" alt="Google analytics">
-      <img src="images/skills/ZOHO analytics.png" alt="Zoho analytics">
-      <img src="images/skills/excel.jpg" alt="Excel">
-      <img src="images/skills/looker.png" alt="Looker">
-      <img src="images/skills/R.jpg" alt="R">
-      <img src="images/skills/jupyter.png" alt="Jupyter">
+    <h2 class="text-center mb-4">Tools</h2>
+    <div class="row justify-content-center g-4">
+      <div class="col-4 col-sm-3 col-md-2 text-center">
+        <img src="images/skills/Python.jpg" alt="Python" class="img-fluid tool-icon">
+        <p class="mt-2">Python</p>
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 text-center">
+        <img src="images/skills/Powerbi.jpg" alt="Power BI" class="img-fluid tool-icon">
+        <p class="mt-2">Power BI</p>
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 text-center">
+        <img src="images/skills/SQL.png" alt="SQL" class="img-fluid tool-icon">
+        <p class="mt-2">SQL</p>
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 text-center">
+        <img src="images/skills/Tableau.png" alt="Tableau" class="img-fluid tool-icon">
+        <p class="mt-2">Tableau</p>
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 text-center">
+        <img src="images/skills/GA.png" alt="Google Analytics" class="img-fluid tool-icon">
+        <p class="mt-2">GA</p>
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 text-center">
+        <img src="images/skills/ZOHO analytics.png" alt="Zoho Analytics" class="img-fluid tool-icon">
+        <p class="mt-2">Zoho</p>
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 text-center">
+        <img src="images/skills/excel.jpg" alt="Excel" class="img-fluid tool-icon">
+        <p class="mt-2">Excel</p>
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 text-center">
+        <img src="images/skills/looker.png" alt="Looker" class="img-fluid tool-icon">
+        <p class="mt-2">Looker</p>
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 text-center">
+        <img src="images/skills/R.jpg" alt="R" class="img-fluid tool-icon">
+        <p class="mt-2">R</p>
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 text-center">
+        <img src="images/skills/jupyter.png" alt="Jupyter" class="img-fluid tool-icon">
+        <p class="mt-2">Jupyter</p>
+      </div>
     </div>
   </div>
 </section>
+
 
 <!-- Contact Section -->
 <section id="contact" class="contact-section text-white bg-dark">
