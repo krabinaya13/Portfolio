@@ -103,7 +103,13 @@
       margin-bottom: 20px;
     }
 
-
+    /* Modified - About section image size */
+    #about img.card-img-top {
+      max-width: 300px;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
 
     #about p {
       text-align: left;
@@ -201,12 +207,11 @@
     }
 
 
-    /* Tools Section */
+    /* Tools Section - Modified */
     #skills {
       padding: 20px 0;
       background: linear-gradient(to right, #f8fafc, #e2e8f0);
     }
-
 
     #skills h2 {
       text-align: center;
@@ -214,18 +219,30 @@
       color: #0f172a;
     }
 
-    .tools-icons img {
-      width: 20px;
-      height: 20px;
+    /* Modified - Tool icons size */
+    .tool-icon {
+      max-width: 80px;
+      height: 80px;
       object-fit: contain;
-      margin: 10px;
       transition: transform 0.3s ease;
+    }
+
+    .tool-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .tool-card p {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      font-weight: 500;
     }
 
     .tools-icons img:hover {
       transform: scale(1.1);
     }
-
 
     /* Contact Section */
     #contact {
@@ -393,50 +410,50 @@
 </section>
 
 
-<!-- Tools Section -->
+<!-- Tools Section - Modified structure for better sizing -->
 <section id="skills" class="section-container text-center">
   <div class="container">
     <h2 class="mb-5 fw-bold">Tools</h2>
     <div class="row justify-content-center g-4">
       <div class="col-4 col-sm-3 col-md-2 tool-card">
-        <img src="images/skills/Python.jpg" alt="Python" class="img-fluid tool-icon mb-2">
-        <p class="mt-2">Python</p>
+        <img src="images/skills/Python.jpg" alt="Python" class="tool-icon">
+        <p>Python</p>
       </div>
       <div class="col-4 col-sm-3 col-md-2 tool-card">
-        <img src="images/skills/Powerbi.jpg" alt="Power BI" class="img-fluid tool-icon mb-2">
-        <p class="mt-2">Power BI</p>
+        <img src="images/skills/Powerbi.jpg" alt="Power BI" class="tool-icon">
+        <p>Power BI</p>
       </div>
       <div class="col-4 col-sm-3 col-md-2 tool-card">
-        <img src="images/skills/SQL.png" alt="SQL" class="img-fluid tool-icon mb-2">
-        <p class="mt-2">SQL</p>
+        <img src="images/skills/SQL.png" alt="SQL" class="tool-icon">
+        <p>SQL</p>
       </div>
       <div class="col-4 col-sm-3 col-md-2 tool-card">
-        <img src="images/skills/Tableau.png" alt="Tableau" class="img-fluid tool-icon mb-2">
-        <p class="mt-2">Tableau</p>
+        <img src="images/skills/Tableau.png" alt="Tableau" class="tool-icon">
+        <p>Tableau</p>
       </div>
       <div class="col-4 col-sm-3 col-md-2 tool-card">
-        <img src="images/skills/GA.png" alt="Google Analytics" class="img-fluid tool-icon mb-2">
-        <p class="mt-2">GA</p>
+        <img src="images/skills/GA.png" alt="Google Analytics" class="tool-icon">
+        <p>GA</p>
       </div>
       <div class="col-4 col-sm-3 col-md-2 tool-card">
-        <img src="images/skills/ZOHO analytics.png" alt="Zoho Analytics" class="img-fluid tool-icon mb-2">
-        <p class="mt-2">Zoho</p>
+        <img src="images/skills/ZOHO analytics.png" alt="Zoho Analytics" class="tool-icon">
+        <p>Zoho</p>
       </div>
       <div class="col-4 col-sm-3 col-md-2 tool-card">
-        <img src="images/skills/excel.jpg" alt="Excel" class="img-fluid tool-icon mb-2">
-        <p class="mt-2">Excel</p>
+        <img src="images/skills/excel.jpg" alt="Excel" class="tool-icon">
+        <p>Excel</p>
       </div>
       <div class="col-4 col-sm-3 col-md-2 tool-card">
-        <img src="images/skills/looker.png" alt="Looker" class="img-fluid tool-icon mb-2">
-        <p class="mt-2">Looker</p>
+        <img src="images/skills/looker.png" alt="Looker" class="tool-icon">
+        <p>Looker</p>
       </div>
       <div class="col-4 col-sm-3 col-md-2 tool-card">
-        <img src="images/skills/R.jpg" alt="R" class="img-fluid tool-icon mb-2">
-        <p class="mt-2">R</p>
+        <img src="images/skills/R.jpg" alt="R" class="tool-icon">
+        <p>R</p>
       </div>
       <div class="col-4 col-sm-3 col-md-2 tool-card">
-        <img src="images/skills/jupyter.png" alt="Jupyter" class="img-fluid tool-icon mb-2">
-        <p class="mt-2">Jupyter</p>
+        <img src="images/skills/jupyter.png" alt="Jupyter" class="tool-icon">
+        <p>Jupyter</p>
       </div>
     </div>
   </div>
